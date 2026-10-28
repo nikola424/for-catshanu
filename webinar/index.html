@@ -10,7 +10,7 @@
 <style>
 @font-face{font-family:"SFD";src:url(../assets/fonts/sfpro-bold.woff2) format("woff2");font-weight:700;font-display:swap}
 @font-face{font-family:"Inter";src:url(../assets/fonts/inter-normal.woff2) format("woff2");font-weight:100 900;font-display:swap}
-:root{--ink:#0e0d0d;--ink2:#1a1717;--red:#460221;--red2:#c6a26d;--deep:#2a0114;--cream:#fff8ec;--mute:rgba(245,239,233,.62);--line:rgba(245,239,233,.14)}
+:root{--ink:#f6ede6;--ink2:#fffaf6;--red:#9b1b30;--red2:#a57a3c;--deep:#5c0f1f;--cream:#2b1218;--mute:rgba(43,18,24,.66);--line:rgba(43,18,24,.12)}
 *{box-sizing:border-box}
 html,body{height:100%;margin:0}
 body{overflow:hidden;background:#000;color:var(--cream);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
@@ -172,6 +172,30 @@ html.reduced .pp div{animation:none}
 .shots img:nth-child(1){transform:rotate(-3deg)}.shots img:nth-child(3){transform:rotate(3deg)}
 .faq .q2{font:700 4.4cqw/1.12 SFD;max-width:20ch}
 .faq .tag{font:600 1.2cqw Inter;letter-spacing:.2em;text-transform:uppercase;color:var(--red2);margin-bottom:4cqh}
+
+/* Cat's palette: champagne, blush, crimson, gold. Photos sit inside the slide, never next to a flat panel. */
+body{background:#efe3da}
+.redbg,.myth .t,.cmp .b,.quiz .on,.kill div.big,.pp .push,.btn{color:#fff}
+.redbg{background:linear-gradient(135deg,#9b1b30,#6e1022)}
+.creambg{background:#fffaf6;color:var(--cream)} .creambg .sub{color:var(--mute)}
+.full::after,.full.rt::after{display:none}
+.full img.bg{width:64%;-webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 14%,#000 38%);mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 14%,#000 38%)}
+.full.rt img.bg{-webkit-mask-image:linear-gradient(270deg,transparent 0,rgba(0,0,0,.35) 14%,#000 38%);mask-image:linear-gradient(270deg,transparent 0,rgba(0,0,0,.35) 14%,#000 38%)}
+.full .tx{max-width:38cqw}
+.split{padding:7cqh 5cqw;gap:5cqw;box-sizing:border-box}
+.split .ph{border-radius:1.6cqw;box-shadow:0 3cqh 8cqh rgba(92,15,31,.18)}
+.split .tx{padding:0 2cqw}
+.q{grid-template-columns:40cqw 1fr;padding-left:5cqw}
+.q .ph{height:82cqh;border-radius:1.6cqw;overflow:hidden;box-shadow:0 3cqh 8cqh rgba(92,15,31,.18)}
+.myth .m{background:#fffaf6} .myth .m h2{color:rgba(43,18,24,.4)}
+.cmp .a h3{color:rgba(43,18,24,.45)} .cmp li{border-top-color:var(--line)} .cmp .b li{border-top-color:rgba(255,255,255,.2)}
+.stack .row.bn,.kill div.on{border-color:rgba(165,122,60,.6)}
+.meter .track{background:linear-gradient(90deg,#e6d3c8,var(--red))}
+.thermo .tube{background:#eadacf}
+.card,.stack .row,.kill div,.pp div{box-shadow:0 1.4cqh 4cqh rgba(92,15,31,.06)}
+.chat{color:var(--cream)}
+.shots img{height:auto;max-height:58cqh;max-width:27cqw;object-fit:contain}
+.framed .pic img,.cluster img,.shots img,.pol,.cover{box-shadow:0 3cqh 8cqh rgba(92,15,31,.2)}
 </style>
 </head>
 <body>
@@ -215,7 +239,7 @@ const DECK = (function(){
 })();
 
 /* ---------- slide builders (design + copy live here) ---------- */
-const I = n => `../assets/img/deck/${n}?v=3`;
+const I = n => `../assets/img/deck/${n}?v=4`;
 const P = {
   sea:'c-sea.jpg', red:'c-red.jpg', red2:'c-red2.jpg', red3:'c-red3.jpg', tea:'c-tea.jpg', desk:'c-desk.jpg', flowers:'c-flowers.jpg',
   champ:'c-champ.jpg', dinner:'c-dinner.jpg', square:'c-square.jpg', close:'c-close.jpg', paris:'c-paris.jpg', yoga:'c-yoga.jpg'
