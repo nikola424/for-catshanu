@@ -173,29 +173,35 @@ html.reduced .pp div{animation:none}
 .faq .q2{font:700 4.4cqw/1.12 SFD;max-width:20ch}
 .faq .tag{font:600 1.2cqw Inter;letter-spacing:.2em;text-transform:uppercase;color:var(--red2);margin-bottom:4cqh}
 
-/* Cat's palette: champagne, blush, crimson, gold. Photos sit inside the slide, never next to a flat panel. */
-body{background:#efe3da}
-.redbg,.myth .t,.cmp .b,.quiz .on,.kill div.big,.pp .push,.btn{color:#fff}
-.redbg{background:linear-gradient(135deg,#9b1b30,#6e1022)}
-.creambg{background:#fffaf6;color:var(--cream)} .creambg .sub{color:var(--mute)}
+/* Cat's own colours (her YouTube thumbnails): plum, gold, white. One solid tone, plain photos, no fades or motion. */
+:root{--ink:#3a0a1b;--ink2:#4a1527;--red:#dec071;--red2:#dec071;--deep:#2a0613;--cream:#fffaf3;--mute:rgba(255,250,243,.7);--line:rgba(255,250,243,.14)}
+body{background:#3a0a1b}
+.redbg,.myth .t,.cmp .b,.quiz .on,.btn{background:#fffaf3;color:#3a0a1b}
+.redbg .eye{color:#9a7a34;opacity:1} .redbg .sub,.myth .t .lab{color:rgba(58,10,27,.7)} .cmp .b li{border-top-color:rgba(58,10,27,.12)}
+.redbg h1 span[style]{color:#9a7a34!important}
+.creambg{background:#fffaf3;color:#3a0a1b} .creambg .sub{color:rgba(58,10,27,.7)} .creambg .eye{color:#9a7a34}
+.creambg .chat{background:#3a0a1b;color:#fffaf3} .chat{color:#3a0a1b} .chat i{background:#dec071;color:#3a0a1b} .caret{background:#dec071}
 .full::after,.full.rt::after{display:none}
-.full img.bg{width:64%;-webkit-mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 14%,#000 38%);mask-image:linear-gradient(90deg,transparent 0,rgba(0,0,0,.35) 14%,#000 38%)}
-.full.rt img.bg{-webkit-mask-image:linear-gradient(270deg,transparent 0,rgba(0,0,0,.35) 14%,#000 38%);mask-image:linear-gradient(270deg,transparent 0,rgba(0,0,0,.35) 14%,#000 38%)}
+.full img.bg{width:50%;mask-image:none;-webkit-mask-image:none}
 .full .tx{max-width:38cqw}
-.split{padding:7cqh 5cqw;gap:5cqw;box-sizing:border-box}
-.split .ph{border-radius:1.6cqw;box-shadow:0 3cqh 8cqh rgba(92,15,31,.18)}
-.split .tx{padding:0 2cqw}
-.q{grid-template-columns:40cqw 1fr;padding-left:5cqw}
-.q .ph{height:82cqh;border-radius:1.6cqw;overflow:hidden;box-shadow:0 3cqh 8cqh rgba(92,15,31,.18)}
-.myth .m{background:#fffaf6} .myth .m h2{color:rgba(43,18,24,.4)}
-.cmp .a h3{color:rgba(43,18,24,.45)} .cmp li{border-top-color:var(--line)} .cmp .b li{border-top-color:rgba(255,255,255,.2)}
-.stack .row.bn,.kill div.on{border-color:rgba(165,122,60,.6)}
-.meter .track{background:linear-gradient(90deg,#e6d3c8,var(--red))}
-.thermo .tube{background:#eadacf}
-.card,.stack .row,.kill div,.pp div{box-shadow:0 1.4cqh 4cqh rgba(92,15,31,.06)}
-.chat{color:var(--cream)}
+.split .ph{border-radius:0;box-shadow:none}
+.q .ph{border-radius:0;box-shadow:none}
+.myth .m{background:var(--ink)} .myth .m h2{color:rgba(255,250,243,.45)}
+.stack .row.bn,.kill div.on{border-color:rgba(222,192,113,.6)}
+.kill div.big{background:#dec071;color:#3a0a1b;font:inherit;letter-spacing:normal} .kill div.big i{color:#3a0a1b}
+.meter .track{background:linear-gradient(90deg,#6b2a3e,#dec071)}
+.thermo .fill{background:#dec071}
+.node:not(:last-child)::after{background:rgba(222,192,113,.5)}
+.btn{box-shadow:none}
+.redbg .btn{background:#3a0a1b!important;color:#fffaf3!important}
+.framed .pic img,.cluster img,.shots img,.pol,.cover,.card,.stack .row,.kill div,.pp div,.chat{box-shadow:none}
+.tilt,.pol,.cover,.cluster img:nth-child(odd),.cluster img:nth-child(2){transform:none}
+.framed .pic img,.shots img,.cover{border-radius:.6cqw}
 .shots img{height:auto;max-height:58cqh;max-width:27cqw;object-fit:contain}
-.framed .pic img,.cluster img,.shots img,.pol,.cover{box-shadow:0 3cqh 8cqh rgba(92,15,31,.2)}
+.a1,.a2,.a3,.a4,.a5{animation:none;opacity:1;transform:none}
+.reveal{transition:none}
+.zoom img.bg{animation:none}
+.kill div,.quiz div{transition:none}
 </style>
 </head>
 <body>
